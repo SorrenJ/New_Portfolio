@@ -7,6 +7,7 @@ body {
     height: 100vh;
     overflow: hidden;
     font-family: Verdana, Arial, sans-serif;
+    color:white;
 }
 
 /* Start screen styling */
@@ -18,7 +19,7 @@ body {
     bottom: 0;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     background-color: #000;
     color: #ffffff;
@@ -37,7 +38,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Flex container to hold the segment circle and list */
+/* Flex container for segment circle and list */
 #segmentListContainer {
     display: flex;
     align-items: center;
@@ -77,6 +78,8 @@ body {
     filter: drop-shadow(0 0 30px #e606c8);
     animation: flicker 1s infinite;
 }
+
+/* Flicker animation */
 @keyframes flicker {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.8; }
@@ -84,73 +87,27 @@ body {
     80% { opacity: 0.9; }
 }
 
-@keyframes flicker1 {
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-        opacity: 1;
-    }
-    20%, 24%, 55% {
-        opacity: 0.8;
-    }
-    21%, 23% {
-        opacity: 0.4;
-    }
+@keyframes holographicGradient {
+    0%, 100% { color: #ff00ff; text-shadow: 0 0 5px #ff00ff, 0 0 10px #ffffff; }
+    50% { color: #ffffff; text-shadow: 0 0 5px #ffffff, 0 0 10px #ff00ff; }
 }
 
-@keyframes holographicGradient {
-    0% {
-        color: #ff00ff;
-        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ffffff, 0 0 15px #ff00ff;
-    }
-    25% {
-        color: #ffffff;
-        text-shadow: 0 0 5px #ffffff, 0 0 10px #ff00ff, 0 0 15px #ffffff;
-    }
-    50% {
-        color: #ff00ff;
-        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ffffff, 0 0 15px #ff00ff;
-    }
-    75% {
-        color: #ffffff;
-        text-shadow: 0 0 5px #ffffff, 0 0 10px #ff00ff, 0 0 15px #ffffff;
-    }
-    100% {
-        color: #ff00ff;
-        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ffffff, 0 0 15px #ff00ff;
-    }
-}
-#centerText {
-    transition: opacity 0.5s ease-in-out;
-    opacity: 1;
-    fill: #ffffff;
-    font-size: 24px;
-}
 #centerTextOverlay {
-    font-family: Arial, sans-serif; /* Avoids using SVG-inherited fonts */
+    font-family: Arial, sans-serif;
     color: #ffffff;
     font-size: 1.5em;
     text-align: center;
-    font-weight: normal; /* Ensure normal weight */
     display: flex;
-    align-items: center; /* Center text and icon vertically */
-    justify-content: center; /* Center text and icon horizontally */
+    align-items: center;
+    justify-content: center;
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Ensure icons display inline with text */
 #centerTextOverlay i {
-    /* margin-left: 0.3em;  */
     font-style: normal;
-    display: inline-block;
     color: #ffffff;
-    font-size: 4em; /* Icon size */
-    text-align: center;
-    transition: opacity 0.5s ease-in-out;
-    animation: holographicGradient 5s infinite, flicker1 2s infinite;
-}
-
-#centerTextOverlay p {
-    margin: 0; /* Remove extra margin */
-    font-size: 0.5em; /* Text size */
+    font-size: 4em;
+    animation: holographicGradient 5s infinite;
 }
 
 /* List container styling */
@@ -158,12 +115,9 @@ body {
     width: 50%;
     max-width: 500px;
     color: #ffffff;
-    margin: 0; /* Remove margin on desktop */
-    
+    margin: 0;
+
 }
-
-
-
 
 .elements-list {
     display: none;
@@ -187,81 +141,183 @@ body {
     background-color: #333;
     margin: 5px 0;
     border-radius: 5px;
-    
 }
-
 
 .elements-list h1 {
     color: #ffffff;
     animation: holographicGradient 5s infinite;
 }
 
-
 /* List item animation */
 .list-item {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-
-    
 }
+
+#mobileListContainer{
+    display:none;
+}
+
+.mobileTitle{
+    display:none;
+}
+/* Desktop styles */
 @media (min-width: 768px) {
-  
-  #listContainer {
-    transform: perspective(500px) rotateX(9deg) rotateY(342deg) skew(2deg, 0deg);
-    filter: drop-shadow(0 0 30px #ffffff);
-    transition: transform 0.3s ease-in-out; /* Smooth transition for the hover effect */
+    #listContainer {
+        transform: perspective(500px) rotateX(9deg) rotateY(342deg) skew(2deg, 0deg);
+        filter: drop-shadow(0 0 30px #ffffff);
+        transition: transform 0.3s ease-in-out;
+        margin-right: 10%;
+        margin-left: -40%;
+        font-size: 1.5em;
+    }
+
+    #listContainer:hover {
+        transform: perspective(500px) rotateX(9deg) rotateY(330deg) skew(2deg, 0deg);
+    }
+
+    .list-item:hover {
+        filter: drop-shadow(0 0 30px #e041f5);
+    }
+
+    .elements-list li {
+        padding: 40px;
+        text-align: center;
+        background-color: #333;
+    }
+
+    /* Hide mobile buttons on desktop */
+    .mobile-button-container {
+        display: none;
+    }
+
+    .mobile-button {
+        display: none;
+    }
 }
 
-
-#listContainer:hover {
-  transform: perspective(500px) rotateX(9deg) rotateY(330deg) skew(2deg, 0deg); /* Slight tilt to the right on hover */
-  
-}
-  .list-item  {
- 
-}
-
-#listContainer .list-item:hover{
-  filter: drop-shadow(0 0 30px #e041f5);
-   
-}
-
-.elements-list li {
-    padding: 40px;
-    text-align: center;
-    background-color: #333;
-  
-    
-}
-
-}
-  
-/* Responsive adjustments */
+/* Mobile adjustments */
 @media (max-width: 768px) {
+ 
+      /* Show mobile list container */
+    
+    .mobileTitle{
+        display:block;
+    }
     #segmentListContainer {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 15px;
-        width: 70%;
-        max-width: 100%; /* Full screen width on mobile */
-        margin: 0 auto;
+        display: none; /* Hide container on mobile */
     }
-    #selectorScreen, #listContainer {
+
+    #selectorScreen{
         width: 100%;
-        max-width: 90%; /* Leave padding on the sides */
-        margin: 0 auto; /* Center elements within container */
-        text-align: center; /* Center content within */
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .list-item {
+        opacity: 1;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+   
+   
+    #listContainer {
+        display: none;
+    }
+    /* Mobile button container */
+    .mobile-button-container {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        gap: 15px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px 15px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       
+    }
+
+    /* Style for individual mobile buttons */
+    .mobile-button {
+        color: #fff;
+        font-size: 1.5em;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        background: #333;
+        transition: transform 0.2s ease;
+       
+    }
+
+    /* Holographic effect on icons */
+    .mobile-button i {
+        animation: holographicGradient 5s infinite, flicker 2s infinite;
+    }
+
+    /* Button hover effect */
+    .mobile-button:hover {
+        transform: scale(1.1);
+        background: #555;
+    }
+
+    /* Keyframes for holographic effect */
+    @keyframes holographicGradient {
+        0% { color: #ff00ff; text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff, 0 0 15px #ff00ff; }
+        25% { color: #00ffff; text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff, 0 0 15px #00ffff; }
+        50% { color: #ff00ff; text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff, 0 0 15px #ff00ff; }
+        75% { color: #00ffff; text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff, 0 0 15px #00ffff; }
+        100% { color: #ff00ff; text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff, 0 0 15px #ff00ff; }
+    }
+
+    /* Keyframes for flicker effect */
+    @keyframes flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+        20%, 24%, 55% { opacity: 0.8; }
+        21%, 23% { opacity: 0.4; }
     }
 
 
-/* Ensure icons display inline with text */
-#centerTextOverlay i {
+    #listContainer {
+        display: none;
+    }
 
-    font-size: 4em; /* Icon size */
-    text-align: center;
-    animation: holographicGradient 5s infinite, flicker1 2s infinite;
-}
+    /* Show mobile list container */
+    #mobileListContainer {
+        display: block;
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Hide all mobile lists by default */
+    .mobile-elements-list {
+        display: none;
+    }
+
+    /* Style for mobile list items */
+    .mobile-elements-list h1 {
+        color: #ffffff;
+        animation: holographicGradient 5s infinite;
+    }
+
+    .mobile-elements-list ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .mobile-elements-list li {
+        padding: 10px;
+        text-align: center;
+        background-color: #555353;
+        margin: 5px 0;
+        border-radius: 5px;
+        color:#ffffff;
+    }
+
 
 }

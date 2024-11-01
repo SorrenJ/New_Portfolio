@@ -13,25 +13,28 @@ function startGame() {
     const startScreen = document.getElementById("startScreen");
     const selectorScreen = document.getElementById("selectorScreen");
     const segments = document.querySelectorAll(".segment");
-
+    const mobileButtonContainer = document.querySelector(".mobile-button-container");
     // Set initial offset positions for segments
     segments[0].style.transform = "translate(-70px,-70px)";
     segments[1].style.transform = "translate(70px, -70px)";
     segments[2].style.transform = "translate(70px, 70px)";
     segments[3].style.transform = "translate(-70px, 70px)";
 
+  
     // Fade out the start screen and show the selector screen
     startScreen.style.opacity = "0";
     setTimeout(() => {
         startScreen.style.display = "none"; // Hide start screen
         selectorScreen.style.display = "block"; // Show selector screen
+        selectorScreen.style.display = "block"; // Show selector screen
         selectorScreen.style.opacity = "1"; // Fade in selector screen
-
+        mobileButtonContainer.style.display="flex";
         // Trigger animation for each segment
         setTimeout(() => {
             segments.forEach(segment => {
                 segment.style.transform = "translate(0, 0)";
                 segment.style.opacity = 1;
+                  mobileButtonContainer.style.display="flex";
             });
         }, 100); // Delay to trigger the transform and opacity transition
     }, 1000); // Delay to match the CSS transition duration
@@ -109,3 +112,18 @@ Object.keys(segmentsData).forEach(segmentId => {
     segment.addEventListener('mouseout', resetCenterText);
     segment.addEventListener('click', () => selectSegment(segmentId));
 });
+
+
+// Function to show the mobile list based on button click
+function showMobileList(listId) {
+    // Hide all mobile lists
+    document.querySelectorAll('.mobile-elements-list').forEach(list => {
+        list.style.display = 'none';
+    });
+
+    // Show the selected mobile list
+    const selectedList = document.getElementById(listId);
+    if (selectedList) {
+        selectedList.style.display = 'block';
+    }
+}

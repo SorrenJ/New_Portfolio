@@ -36,9 +36,17 @@
             Hover
         </div>
     </div>
-    
+</div>
+
+
+
+
+
+
       <!-- Lists for each segment (placed beside selector screen) -->
       <div id="listContainer">
+
+
           <div id="list1" class="elements-list">
               <h1>UX Design</h1>
             
@@ -71,7 +79,61 @@
               </ul>
           </div>
       </div>
-  </div>
+ 
+<!-- Mobile List Container -->
+<div id="mobileListContainer">
+
+    <h1 class="mobileTitle">Choose a project type</h1>
+
+    <div id="mobileList1" class="mobile-elements-list">
+        <h1>UX Design</h1>
+        <ul>
+            <li class="list-item">Travel App Figma Prototype</li>
+            <li class="list-item">Bakery Website Redesign</li>
+            <li class="list-item">Smart Drive Website</li>
+        </ul>
+    </div>
+    <div id="mobileList2" class="mobile-elements-list">
+        <h1>AI/ML</h1>
+        <ul>
+            <li class="list-item">Sleep Wellness Chatbot</li>
+            <li class="list-item">Facemask Detection App</li>
+            <li class="list-item">Wildlife and Pest Animal Detection</li>
+        </ul>
+    </div>
+    <div id="mobileList3" class="mobile-elements-list">
+        <h1>Other Apps</h1>
+        <ul>
+            <li class="list-item">Caretaker App</li>
+        </ul>
+    </div>
+    <div id="mobileList4" class="mobile-elements-list">
+        <h1>Web Apps</h1>
+        <ul>
+            <li class="list-item">Virtual Pet Web Application</li>
+            <li class="list-item">Map Listing Web Application</li>
+            <li class="list-item">SFU Student Webpage Creator</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Hardcoded Mobile Button Container -->
+<div class="mobile-button-container" >
+    <div class="mobile-button" onclick="showMobileList('mobileList4')">
+        <i class="fa fa-code"></i>
+    </div>
+    <div class="mobile-button" onclick="showMobileList('mobileList1')">
+        <i class="fa fa-pencil-alt"></i>
+    </div>
+    <div class="mobile-button" onclick="showMobileList('mobileList2')">
+        <i class="fa fa-robot"></i>
+    </div>
+    <div class="mobile-button" onclick="showMobileList('mobileList3')">
+        <i class="fa fa-asterisk"></i>
+    </div>
+  
+</div>
+
   <script src="javaScript/main.js"></script>
   
 
