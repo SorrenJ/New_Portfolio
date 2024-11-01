@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorren Jao</title>
+
+</head>
+<body>
+
+  <!-- Start Screen -->
+  <div id="startScreen" onclick="startGame()">
+    <h1>Sorren's Portfolio</h1>
+    <canvas id="treeCanvas" width="800" height="400"></canvas>
+    <p>Click Anywhere to Start</p>
+    <script src="javaScript/tree.js"></script>
+  </div>
+
+  <!-- Segment and List Container -->
+  <div id="segmentListContainer">
+      <!-- Selector Screen with Segments -->
+      <div id="selectorScreen" style="position: relative; width: 500px; height: 500px;">
+        <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <!-- Segment paths -->
+          <path id="segment1" class="segment" d="M250,70 A180,180 0 0,1 420,250 L380,250 A140,140 0 0,0 250,110 Z" fill="#ffffff" />
+          <path id="segment2" class="segment" d="M420,250 A180,180 0 0,1 250,420 L250,380 A140,140 0 0,0 380,250 Z" fill="#ffffff" />
+          <path id="segment3" class="segment" d="M250,420 A180,180 0 0,1 80,250 L120,250 A140,140 0 0,0 250,380 Z" fill="#ffffff" />
+          <path id="segment4" class="segment" d="M80,250 A180,180 0 0,1 250,70 L250,110 A140,140 0 0,0 120,250 Z" fill="#ffffff" />
+      </svg>
+    
+        <!-- Center text overlay for Font Awesome icons and text -->
+        <div id="centerTextOverlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 1.5em;">
+            Hover
+        </div>
+    </div>
+    
+      <!-- Lists for each segment (placed beside selector screen) -->
+      <div id="listContainer">
+          <div id="list1" class="elements-list">
+              <h1>UX Design</h1>
+            
+              <ul>
+                  <li class="list-item">Travel App Figma Prototype</li>
+                  <li class="list-item">Bakery Website Redesign</li>
+                  <li class="list-item">Smart Drive Website</li>
+              </ul>
+          </div>
+          <div id="list2" class="elements-list">
+              <h1>AI/ML</h1>
+              <ul>
+                  <li class="list-item">Sleep Wellness Chatbot</li>
+                  <li class="list-item">Facemask Detection App</li>
+                  <li class="list-item">Wildlife and Pest Animal Detection</li>
+              </ul>
+          </div>
+          <div id="list3" class="elements-list">
+              <h1>Other Apps</h1>
+              <ul>
+                  <li class="list-item">Caretaker App</li>
+              </ul>
+          </div>
+          <div id="list4" class="elements-list">
+              <h1>Web Apps</h1>
+              <ul>
+                  <li class="list-item">Virtual Pet Web Application</li>
+                  <li class="list-item">Map Listing Web Application</li>
+                  <li class="list-item">SFU Student Webpage Creator</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <script src="javaScript/main.js"></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+body {
+    background-color: #000;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+/* Start screen styling */
+#startScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #000;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 1s ease;
+    padding: 20px;
+}
+
+/* Canvas styling */
+#treeCanvas {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px;
+}
+
+/* Flex container to hold the segment circle and list */
+#segmentListContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Segment circle (selector screen) */
+#selectorScreen {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+    width: 50%;
+    max-width: 500px;
+}
+
+/* Segment moves to the side when list is active */
+#selectorScreen.move-side {
+    transform: translateX(-100px); /* Adjust to slide left */
+}
+
+/* Segment styling */
+.segment {
+    filter: drop-shadow(0 0 10px white);
+    opacity: 0;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+.segment:hover {
+    filter: drop-shadow(0 0 20px #ffffff);
+    animation: flicker 1.5s infinite;
+    cursor: pointer;
+}
+.selected {
+    filter: drop-shadow(0 0 30px #e606c8);
+    animation: flicker 1s infinite;
+}
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+    70% { opacity: 0.6; }
+    80% { opacity: 0.9; }
+}
+
+@keyframes flicker1 {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0.8;
+    }
+    21%, 23% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes holographicGradient {
+    0% {
+        color: #ff00ff;
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ffffff, 0 0 15px #ff00ff;
+    }
+    25% {
+        color: #ffffff;
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ff00ff, 0 0 15px #ffffff;
+    }
+    50% {
+        color: #ff00ff;
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ffffff, 0 0 15px #ff00ff;
+    }
+    75% {
+        color: #ffffff;
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ff00ff, 0 0 15px #ffffff;
+    }
+    100% {
+        color: #ff00ff;
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ffffff, 0 0 15px #ff00ff;
+    }
+}
+#centerText {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    fill: #ffffff;
+    font-size: 24px;
+}
+#centerTextOverlay {
+    font-family: Arial, sans-serif; /* Avoids using SVG-inherited fonts */
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: normal; /* Ensure normal weight */
+    display: flex;
+    align-items: center; /* Center text and icon vertically */
+    justify-content: center; /* Center text and icon horizontally */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Ensure icons display inline with text */
+#centerTextOverlay i {
+    /* margin-left: 0.3em;  */
+    font-style: normal;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 4em; /* Icon size */
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    animation: holographicGradient 5s infinite, flicker1 2s infinite;
+}
+
+#centerTextOverlay p {
+    margin: 0; /* Remove extra margin */
+    font-size: 0.5em; /* Text size */
+}
+
+/* List container styling */
+#listContainer {
+    width: 50%;
+    max-width: 500px;
+    color: #ffffff;
+    margin: 0; /* Remove margin on desktop */
+    
+}
+
+
+
+
+.elements-list {
+    display: none;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.elements-list.active {
+    display: block;
+}
+
+.elements-list ul {
+    padding: 0;
+    list-style: none;
+}
+
+.elements-list li {
+    padding: 10px;
+    text-align: center;
+    background-color: #333;
+    margin: 5px 0;
+    border-radius: 5px;
+    
+}
+
+
+.elements-list h1 {
+    color: #ffffff;
+    animation: holographicGradient 5s infinite;
+}
+
+
+/* List item animation */
+.list-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    
+}
+@media (min-width: 768px) {
+  
+  #listContainer {
+    transform: perspective(500px) rotateX(9deg) rotateY(342deg) skew(2deg, 0deg);
+    filter: drop-shadow(0 0 30px #ffffff);
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the hover effect */
+}
+
+
+#listContainer:hover {
+  transform: perspective(500px) rotateX(9deg) rotateY(330deg) skew(2deg, 0deg); /* Slight tilt to the right on hover */
+  
+}
+  .list-item  {
+ 
+}
+
+#listContainer .list-item:hover{
+  filter: drop-shadow(0 0 30px #e041f5);
+   
+}
+
+.elements-list li {
+    padding: 40px;
+    text-align: center;
+    background-color: #333;
+  
+    
+}
+
+}
+  
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #segmentListContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        width: 70%;
+        max-width: 100%; /* Full screen width on mobile */
+        margin: 0 auto;
+    }
+    #selectorScreen, #listContainer {
+        width: 100%;
+        max-width: 90%; /* Leave padding on the sides */
+        margin: 0 auto; /* Center elements within container */
+        text-align: center; /* Center content within */
+    }
+
+
+/* Ensure icons display inline with text */
+#centerTextOverlay i {
+
+    font-size: 4em; /* Icon size */
+    text-align: center;
+    animation: holographicGradient 5s infinite, flicker1 2s infinite;
+}
+
+}
