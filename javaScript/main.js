@@ -1,8 +1,8 @@
 const segmentsData = {
-    segment1: { text: 'UX Design', iconClass: 'fa-pencil-alt', listId: 'list1' },
-    segment2: { text: 'AI/ML', iconClass: 'fa-robot', listId: 'list2' },
-    segment3: { text: 'Other', iconClass: 'fa-asterisk', listId: 'list3' },
-    segment4: { text: 'Full-Stack', iconClass: 'fa-code', listId: 'list4' }
+    segment1: { text: 'UX Design', iconClass:'fa-brands fa-figma', listId: 'list1' },
+    segment2: { text: 'AI/ML', iconClass:'fa-robot', listId: 'list2' },
+    segment3: { text: 'Sorren', iconClass:'fa-user', listId: 'list3' },
+    segment4: { text: 'Full-Stack', iconClass:'fa-laptop-code', listId: 'list4' }
 };
 
 // Store selected segment data (text and icon)
