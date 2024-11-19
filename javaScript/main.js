@@ -211,19 +211,27 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>Travel App Figma Prototype</h3>
             <img src="path/to/travel-app.jpg" alt="Travel App" style="width:100%; border-radius:8px;">
             <p>A prototype design for a travel app using Figma. This project focuses on user-friendly navigation and modern UI elements.</p>
-        `,
+                 <div class="tag">Figma</div>
+    <div class="tag">Adobe Illustrator</div>
+            `,
         "Bakery Website Redesign": `
             <h3>Bakery Website Redesign</h3>
             <img src="path/to/bakery-website.jpg" alt="Bakery Website" style="width:100%; border-radius:8px;">
             <p>Redesigned a bakery website for improved user experience, focusing on aesthetics and accessibility.</p>
-        `,
+          <div class="tag">CSS3</div>
+    <div class="tag">HTML</div>
+    <div class="tag">CSS3</div>
+     <div class="tag">SASS/SCSS</div>
+<div class="tag">JavaScript</div>
+<div class="tag">Figma</div>
+            `,
         "Smart Drive Website": `
             <h3>Smart Drive Website</h3>
             <img src="path/to/smart-drive.jpg" alt="Smart Drive" style="width:100%; border-radius:8px;">
             <p>A smart website for driving education and resources. It provides tools for students preparing for driving tests.</p>
        <div class="tag"> Joomla!</div> 
            <div class="tag"> Joomla!</div>
-    <div class="tag"> CSS</div>
+    <div class="tag"> CSS3</div>
     <div class="tag"> HTML</div>
     <div class="tag"> Hikashop</div>`,
 
@@ -231,17 +239,33 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>Sleep Wellness Chatbot</h3>
             <img src="path/to/sleep-chatbot.jpg" alt="Sleep Chatbot" style="width:100%; border-radius:8px;">
             <p>An AI chatbot that promotes better sleep habits through personalized recommendations and engaging conversations.</p>
-        `,
+        <div class="tag">Llama-2-13B-Chat</div>
+<div class="tag">LangChain</div>
+<div class="tag">ChromaDB</div>
+<div class="tag">Gradio</div>
+<div class="tag">Python</div>
+            `,
         "Facemask Detection App": `
             <h3>Facemask Detection App</h3>
             <img src="path/to/facemask-detection.jpg" alt="Facemask Detection" style="width:100%; border-radius:8px;">
             <p>An AI app for detecting facemask compliance in real-time using advanced image recognition technologies.</p>
-        `,
+       <div class="tag">Java</div>
+<div class="tag">Android Studios</div>
+<div class="tag">TensorFlow</div>
+<div class="tag">YOLOv2</div>
+            `,
         "Wildlife and Pest Animal Detection": `
             <h3>Wildlife and Pest Animal Detection</h3>
             <img src="path/to/wildlife-detection.jpg" alt="Wildlife Detection" style="width:100%; border-radius:8px;">
             <p>AI-powered app to identify wildlife and pest animals, aiding conservation and pest control efforts.</p>
-        `,
+        <div class="tag">YOLOv8</div>
+<div class="tag">TensorFlow</div>
+<div class="tag">Python</div>
+<div class="tag">Matplotlib Pyplot</div>
+<div class="tag">Pandas</div>
+<div class="tag">Numpy</div>
+
+            `,
         "Github": `
             <h3>Github</h3>
             <a href="https://github.com/SorrenJao" target="_blank">
@@ -253,17 +277,41 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>Virtual Pet Web Application</h3>
             <img src="path/to/virtual-pet.jpg" alt="Virtual Pet" style="width:100%; border-radius:8px;">
             <p>A fun virtual pet app built with modern web technologies. Manage pet stats, mood, and activities!</p>
-        `,
+        <div class="tag">React</div>
+<div class="tag">JavaScript</div>
+<div class="tag">Express</div>
+<div class="tag">EJS</div>
+<div class="tag">SQL</div>
+<div class="tag">vaderSentiment</div>
+<div class="tag">Sentiment</div>
+<div class="tag">Cloudinary</div>
+<div class="tag">Git</div>
+<div class="tag">Node.js</div>
+<div class="tag">AWS RDS</div>
+            `,
         "Map Listing Web Application": `
             <h3>Map Listing Web Application</h3>
-            <img src="path/to/map-listing.jpg" alt="Map Listing" style="width:100%; border-radius:8px;">
+          <img src="path/to/map-listing.jpg" alt="Map Listing" style="width:100%; border-radius:8px;">
             <p>A map-based app for listing and finding locations with advanced search capabilities.</p>
-        `,
+        <div class="tag">Node.js</div>
+<div class="tag">jQuery</div>
+<div class="tag">Leaflet</div>
+<div class="tag">SQL</div>
+<div class="tag">PostgreSQL</div>
+<div class="tag">SASS</div>
+<div class="tag">Express</div>
+<div class="tag">EJS</div>
+<div class="tag">Git</div>
+            `,
         "SFU Student Webpage Creator": `
             <h3>SFU Student Webpage Creator</h3>
             <img src="path/to/sfu-webpage.jpg" alt="SFU Student Webpage" style="width:100%; border-radius:8px;">
             <p>A web page generator for SFU students, allowing quick and easy personal webpage creation.</p>
-        `,
+       <div class="tag">HTML</div>
+<div class="tag">CSS</div>
+<div class="tag">JavaScript</div>
+<div class="tag">jQuery</div>
+            `,
     };
     
 

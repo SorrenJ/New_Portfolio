@@ -288,7 +288,7 @@ a {
         left: 100px; /* Positioned to the far left */
         top: 50%; /* Centered vertically */
         transform: translateY(-50%);
-        width: 500px;
+        width: 300px;
         padding: 20px;
         /* background-color: #1e1e1e;  */
         color: #ffffff; /* White text */
