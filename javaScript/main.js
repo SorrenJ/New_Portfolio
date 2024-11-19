@@ -1,12 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
     const startScreen = document.getElementById("startScreen");
 
+
+
+    
     // Check if the URL contains the #project anchor
     if (window.location.hash === "#project") {
         // Hide the start screen and trigger the animation
         startScreen.style.display = "none"; // Hide the start screen immediately
         startGame(); // Trigger the segment animation
     }
+
+
+        const specialInfoBoxes = {
+            segment1: document.getElementById("specialInfoBox1"),
+            segment2: document.getElementById("specialInfoBox2"),
+            segment3: document.getElementById("specialInfoBox3"),
+            segment4: document.getElementById("specialInfoBox4"),
+        };
+    
+        const listItems = document.querySelectorAll(".list-item");
+    
+        // Function to show the special info box for the selected segment
+        function showSpecialInfoBox(segmentId) {
+            Object.values(specialInfoBoxes).forEach(box => box.classList.remove("active")); // Hide all boxes
+            if (specialInfoBoxes[segmentId] && window.innerWidth >= 1080) {
+                specialInfoBoxes[segmentId].classList.add("active"); // Show the active box
+            }
+        }
+    
+        // Function to hide the special info box
+        function hideSpecialInfoBoxes() {
+            Object.values(specialInfoBoxes).forEach(box => box.classList.remove("active")); // Hide all boxes
+        }
+    
+        // Add click event for segment selection
+        document.querySelectorAll(".segment").forEach(segment => {
+            segment.addEventListener("click", () => {
+                const segmentId = segment.id;
+                showSpecialInfoBox(segmentId); // Show the relevant info box
+            });
+        });
+    
+        // Hide the special info box when hovering over a list-item
+        listItems.forEach(item => {
+            item.addEventListener("mouseover", hideSpecialInfoBoxes); // Hide all info boxes
+    
+            // Restore the special info box when unhovering
+            item.addEventListener("mouseout", () => {
+                const selectedSegment = document.querySelector(".segment.selected");
+                if (selectedSegment) {
+                    showSpecialInfoBox(selectedSegment.id); // Re-show the box for the selected segment
+                }
+            });
+        });
+   
+    
+
+
+
 });
 
 
@@ -79,6 +131,7 @@ function resetCenterText() {
 // Function to handle segment selection and display corresponding list
 function selectSegment(segmentId) {
     const { text, iconClass, listId } = segmentsData[segmentId];
+    const specialInfoBox = document.getElementById("specialInfoBox");
     document.querySelectorAll('.segment').forEach(segment => segment.classList.remove('selected'));
     document.getElementById(segmentId).classList.add('selected');
     
@@ -115,6 +168,12 @@ function selectSegment(segmentId) {
         selectorScreen.classList.add('move-side');
     } else {
         selectorScreen.classList.remove('move-side');
+    }
+
+    if (segmentId === "segment3" && window.innerWidth >= 1080) {
+        specialInfoBox.classList.add("active");
+    } else {
+        specialInfoBox.classList.remove("active");
     }
 }
 
@@ -167,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="tag"> CSS</div>
     <div class="tag"> HTML</div>
     <div class="tag"> Hikashop</div>`,
-    
+
         "Sleep Wellness Chatbot": `
             <h3>Sleep Wellness Chatbot</h3>
             <img src="path/to/sleep-chatbot.jpg" alt="Sleep Chatbot" style="width:100%; border-radius:8px;">

@@ -279,6 +279,35 @@ a {
     }
 }
 
+
+@media screen and (min-width: 1080px) {
+
+    .special-info-box {
+        display: none; /* Hidden by default */
+        position: absolute;
+        left: 100px; /* Positioned to the far left */
+        top: 50%; /* Centered vertically */
+        transform: translateY(-50%);
+        width: 500px;
+        padding: 20px;
+        /* background-color: #1e1e1e;  */
+        color: #ffffff; /* White text */
+        font-size: 1.5em;
+        /* border: 2px solid #9b59b6;  */
+        /* border-radius: 12px;  */
+        /* box-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6, 0 0 30px #9b59b6; Neon glow */
+        z-index: 10;
+        visibility: hidden;
+    }
+
+    .special-info-box.active {
+
+        display: block; /* Display only on larger screens */
+        opacity: 1; /* Make visible when active */
+        visibility: visible;
+    }
+}
+
 .tag {
     background-color: #DF62BC;
     border-radius: 25px;
@@ -297,6 +326,7 @@ a {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }
+
 
 
 /* Mobile adjustments */
