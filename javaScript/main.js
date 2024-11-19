@@ -208,15 +208,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const infoBoxContent = {
         "Travel App Figma Prototype": `
-            <h3>Travel App Figma Prototype</h3>
-            <img src="path/to/travel-app.jpg" alt="Travel App" style="width:100%; border-radius:8px;">
+            <div style="font-size:6em; text-align:center"><i class="fa-solid fa-plane fa-bounce"></i></div>
             <p>A prototype design for a travel app using Figma. This project focuses on user-friendly navigation and modern UI elements.</p>
                  <div class="tag">Figma</div>
     <div class="tag">Adobe Illustrator</div>
             `,
         "Bakery Website Redesign": `
-            <h3>Bakery Website Redesign</h3>
-            <img src="path/to/bakery-website.jpg" alt="Bakery Website" style="width:100%; border-radius:8px;">
+            <div style="font-size:6em; text-align:center"><i class="fa-solid fa-cake-candles fa-bounce"></i></div>
             <p>Redesigned a bakery website for improved user experience, focusing on aesthetics and accessibility.</p>
           <div class="tag">CSS3</div>
     <div class="tag">HTML</div>
@@ -226,8 +224,8 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="tag">Figma</div>
             `,
         "Smart Drive Website": `
-            <h3>Smart Drive Website</h3>
-            <img src="path/to/smart-drive.jpg" alt="Smart Drive" style="width:100%; border-radius:8px;">
+          
+    <div style="font-size:6em; text-align:center"><i class="fa-solid fa-car-side fa-bounce"></i></div>
             <p>A smart website for driving education and resources. It provides tools for students preparing for driving tests.</p>
        <div class="tag"> Joomla!</div> 
            <div class="tag"> Joomla!</div>
@@ -236,8 +234,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="tag"> Hikashop</div>`,
 
         "Sleep Wellness Chatbot": `
-            <h3>Sleep Wellness Chatbot</h3>
-            <img src="path/to/sleep-chatbot.jpg" alt="Sleep Chatbot" style="width:100%; border-radius:8px;">
+           
+            <div style="font-size:6em; text-align:center"><i class="fa-solid fa-bed fa-fade"></i></div>
             <p>An AI chatbot that promotes better sleep habits through personalized recommendations and engaging conversations.</p>
         <div class="tag">Llama-2-13B-Chat</div>
 <div class="tag">LangChain</div>
@@ -246,8 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="tag">Python</div>
             `,
         "Facemask Detection App": `
-            <h3>Facemask Detection App</h3>
-            <img src="path/to/facemask-detection.jpg" alt="Facemask Detection" style="width:100%; border-radius:8px;">
+           <div style="font-size:6em; text-align:center"><i class="fa-solid fa-mask-face fa-bounce"></i></div>
             <p>An AI app for detecting facemask compliance in real-time using advanced image recognition technologies.</p>
        <div class="tag">Java</div>
 <div class="tag">Android Studios</div>
@@ -255,8 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="tag">YOLOv2</div>
             `,
         "Wildlife and Pest Animal Detection": `
-            <h3>Wildlife and Pest Animal Detection</h3>
-            <img src="path/to/wildlife-detection.jpg" alt="Wildlife Detection" style="width:100%; border-radius:8px;">
+            <div style="font-size:6em; text-align:center"><i class="fa-solid fa-crow fa-bounce"></i></div>
             <p>AI-powered app to identify wildlife and pest animals, aiding conservation and pest control efforts.</p>
         <div class="tag">YOLOv8</div>
 <div class="tag">TensorFlow</div>
@@ -273,9 +269,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
             <p>Visit Sorren's GitHub profile to view all repositories and projects.</p>
         `,
-        "Virtual Pet Web Application": `
-            <h3>Virtual Pet Web Application</h3>
-            <img src="path/to/virtual-pet.jpg" alt="Virtual Pet" style="width:100%; border-radius:8px;">
+        "Virtual Pet Web Application": ` 
+          <div style="font-size:6em; text-align:center"><i class="fa-solid fa-cat fa-bounce"></i></div>
             <p>A fun virtual pet app built with modern web technologies. Manage pet stats, mood, and activities!</p>
         <div class="tag">React</div>
 <div class="tag">JavaScript</div>
@@ -290,8 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="tag">AWS RDS</div>
             `,
         "Map Listing Web Application": `
-            <h3>Map Listing Web Application</h3>
-          <img src="path/to/map-listing.jpg" alt="Map Listing" style="width:100%; border-radius:8px;">
+        <div style="font-size:6em; text-align:center"><i class="fa-regular fa-compass fa-bounce"></i></div>
             <p>A map-based app for listing and finding locations with advanced search capabilities.</p>
         <div class="tag">Node.js</div>
 <div class="tag">jQuery</div>
@@ -304,8 +298,8 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="tag">Git</div>
             `,
         "SFU Student Webpage Creator": `
-            <h3>SFU Student Webpage Creator</h3>
-            <img src="path/to/sfu-webpage.jpg" alt="SFU Student Webpage" style="width:100%; border-radius:8px;">
+            
+          <div style="font-size:6em; text-align:center"><i class="fa-solid fa-user-graduate fa-bounce"></i></div>
             <p>A web page generator for SFU students, allowing quick and easy personal webpage creation.</p>
        <div class="tag">HTML</div>
 <div class="tag">CSS</div>
