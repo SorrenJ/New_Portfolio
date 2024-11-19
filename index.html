@@ -7,10 +7,35 @@
   <link rel="stylesheet" href="styles/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sorren Jao</title>
-
+  <link href="styles/navbar.css" rel="stylesheet">
+  <link href="styles/togglemenu.css" rel="stylesheet">
 </head>
-<body>
 
+<body>
+    <header>
+
+        <!-- header -->
+        <div class="home_nav">
+          <div class="home_nav-item">
+            <div class="home_icon"><a href="index.html">
+                <img src="assets/logo.svg" alt="logo"></a>
+    
+              <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+                <i class="fa fa-bars" style="font-size:24pt"></i>
+              </a>
+            </div>
+          </div>
+    
+          <div class="home_nav-item">
+            <div id="myLinks" class="nav">
+              <div class="nav-item special-nav-item"><a href="index.html#project"><i class="fa fa-robot" style="font-size:2.5em; padding-right:8px"></i>Sorren AI</a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+      <script src="javaScript/navbar.js"></script>
+    
   <!-- Start Screen -->
   <div id="startScreen" onclick="startGame()">
     <h1>Sorren's Portfolio</h1>
@@ -21,6 +46,11 @@
 
   <!-- Segment and List Container -->
   <div id="segmentListContainer">
+
+   
+      <script src="javaScript/navbar.js"></script>
+    
+
       <!-- Selector Screen with Segments -->
       <div id="selectorScreen" style="position: relative; width: 500px; height: 500px;">
         <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +83,11 @@
               <ul>
                   <li class="list-item">Travel App Figma Prototype</li>
                   <li class="list-item">Bakery Website Redesign</li>
-                  <li class="list-item">Smart Drive Website</li>
+                  <a href="Smart_Drive_Test.html">
+                  <li class="list-item">
+                    Smart Drive Website
+                </li>
+            </a>
               </ul>
           </div>
           <div id="list2" class="elements-list">
@@ -95,7 +129,12 @@
         <ul>
             <li class="list-item">Travel App Figma Prototype</li>
             <li class="list-item">Bakery Website Redesign</li>
-            <li class="list-item">Smart Drive Website</li>
+            <a href="Smart_Drive_Test.html">
+                <li class="list-item">
+                  Smart Drive Website
+              </li>
+          </a>
+       
         </ul>
     </div>
     <div id="mobileList2" class="mobile-elements-list">

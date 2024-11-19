@@ -138,7 +138,7 @@ body {
 .elements-list li {
     padding: 10px;
     text-align: center;
-    background-color: #333;
+  
     margin: 5px 0;
     border-radius: 5px;
 }
@@ -148,13 +148,27 @@ body {
     animation: holographicGradient 5s infinite;
 }
 
+/* .elements-list a li{
+color:white;
+text-decoration: none !important;
+} */
+a {
+    text-decoration: none;
+}
+
 /* List item animation */
 .list-item {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+   
 }
 
+.list-item a li{
+    color:white;
+    text-decoration: none !important;
+  
+    }
 #mobileListContainer{
     display:none;
 }
@@ -182,10 +196,55 @@ body {
     }
 
     .elements-list li {
+        position: relative; /* Allows positioning of the pseudo-element */
         padding: 40px;
         text-align: center;
-        background-color: #333;
+        background-color: rgba(49, 8, 68, 0.007); /* Add transparency */
+        backdrop-filter: blur(10px); /* Creates the glass effect */
+        border: 1px solid rgba(255, 255, 255, 0.3); /* Optional frosted border */
+        border-radius: 10px; /* Slightly rounded corners for a modern look */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        color: white; /* Adjust text color for readability */
+        font-weight: bold; /* Emphasize text */
+        overflow: hidden; /* Ensure the shine effect doesn't overflow the borders */
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
     }
+    
+    .elements-list li::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.233) 0%, rgba(255, 255, 255, 0) 70%);
+        opacity: 0.6;
+        border-radius: 10px; /* Match the parent border-radius */
+        pointer-events: none; /* Ensure it doesn't interfere with interactivity */
+        transform:scale(1) rotate(-15deg); /* Initial rotation for shine */
+        transition: transform 0.3s ease; /* Smooth transition for hover */
+        animation: pulsate 3s infinite ease-in-out; 
+    
+    }
+    
+    .elements-list li:hover::before {
+        transform: rotate(10deg); /* Change rotation when hovered */
+    }
+    
+    @keyframes pulsate {
+        0%, 100% {
+            transform: scale(1); /* Normal size */
+            opacity: 0.6; /* Slightly visible */
+        }
+        50% {
+            transform: scale(1.05); /* Slightly larger and rotated */
+            opacity: 0.8; /* Slightly brighter */
+        }
+    }
+    .elements-list a li{
+        color:white;
+        text-decoration: none;
+        }
 
     /* Hide mobile buttons on desktop */
     .mobile-button-container {
