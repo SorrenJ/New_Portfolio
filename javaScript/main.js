@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const startScreen = document.getElementById("startScreen");
+
+    // Check if the URL contains the #project anchor
+    if (window.location.hash === "#project") {
+        // Hide the start screen and trigger the animation
+        startScreen.style.display = "none"; // Hide the start screen immediately
+        startGame(); // Trigger the segment animation
+    }
+});
+
+
+
 const segmentsData = {
     segment1: { text: 'UX Design', iconClass:'fa-brands fa-figma', listId: 'list1' },
     segment2: { text: 'AI/ML', iconClass:'fa-robot', listId: 'list2' },
